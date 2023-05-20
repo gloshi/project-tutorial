@@ -1,5 +1,4 @@
-import { ThemeButton } from "./ui/ThemeButton";
-
+import { ThemeButton } from './ui/ThemeButton'
 
 export {
     ThemeButton

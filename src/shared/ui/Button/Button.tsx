@@ -1,20 +1,20 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames'
 
 import styles from './Button.module.scss'
-import { ButtonHTMLAttributes, FC, HtmlHTMLAttributes } from 'react';
+import { type ButtonHTMLAttributes, type FC, HtmlHTMLAttributes } from 'react'
+import React from 'react'
 
 export enum ThemeButtonChanger {
-    CLEAR = 'clear'
+  CLEAR = 'clear'
 }
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
-  className?:string,
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string
   theme?: ThemeButtonChanger
 }
 
-export const Button:FC<ButtonProps> = (props) => {
-
-    const {
+export const Button: FC<ButtonProps> = (props) => {
+  const {
         className,
         children,
         theme,
@@ -22,9 +22,9 @@ export const Button:FC<ButtonProps> = (props) => {
     } = props
 
   return (
-    <button className={classNames(styles.button, {[styles[theme]]:true}, [className])}
-    {...otherProps}>
-        {children}
-    </button>
+        <button className={classNames(styles.button, { [styles[theme]]: true }, [className])}
+          {...otherProps}>
+          {children}
+      </button>
   )
 }

@@ -3,5 +3,8 @@
     "Перевод": "Translate",
     "О нас": "About",
     "На главную": "Home",
-    "Язык": "English"
+    "Язык": "English",
+    "Страница не найдена": "Page not found",
+    "Произошла ошибка 500": "Something went wrong",
+    "Обновить страницу": "Refresh this page"
 }
