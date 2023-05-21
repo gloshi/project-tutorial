@@ -2,7 +2,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Theme } from 'app/providers/ThemeProvider';
-import { Button, ThemeButtonChanger } from './Button';
+import { Button, ButtonSize, ThemeButtonChanger } from './Button';
 import { ThemeDecorator } from 'shared/config/storybookDecorator/ThemeDecorator/ThemeDecorator';
 
 export default {
@@ -34,8 +34,37 @@ Outline.args = {
 
 };
 Outline.decorators = [ThemeDecorator(Theme.LIGHT)];
+
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
     children: 'Text',
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];
+export const BackgroundTheme = Template.bind({});
+BackgroundTheme.args = {
+    children: 'Text',
+    theme: ThemeButtonChanger.BACKGROUND
+};
+
+export const BackgroundThemeInverted = Template.bind({});
+BackgroundThemeInverted.args = {
+    children: 'Text',
+    theme: ThemeButtonChanger.BACKGROUND_INVERTED
+
+};
+export const Square = Template.bind({});
+Square.args = {
+    children: '>',
+    theme: ThemeButtonChanger.BACKGROUND,
+    square: true
+
+};
+export const SizeL = Template.bind({});
+SizeL.args = {
+    children: '>',
+    theme: ThemeButtonChanger.BACKGROUND,
+    square: true,
+    size: ButtonSize.L
+
+};
+
