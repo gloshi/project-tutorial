@@ -1,23 +1,15 @@
+import { classNames } from "shared/lib/classNames/classNames";
 
-import { classNames } from 'shared/lib/classNames/classNames'
-
-import styles from './NavBar.module.scss'
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
-import { useTranslation } from 'react-i18next'
+import styles from "./NavBar.module.scss";
 
 interface NavBarProps {
-  className?: string
+  className?: string;
 }
 
 export const NavBar = ({ className }: NavBarProps) => {
-    const { t, i18n } = useTranslation()
-
-    return (
-      <div className={classNames(styles.Navbar, {}, [])}>
-            <div className={styles.links}>
-              
-            </div>
-
-        </div>
-  )
-}
+  return (
+    <div className={classNames(styles.Navbar, {}, [])}>
+      <div className={styles.links}></div>
+    </div>
+  );
+};

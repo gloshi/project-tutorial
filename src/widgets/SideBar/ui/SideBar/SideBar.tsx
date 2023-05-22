@@ -7,11 +7,11 @@ import { ThemeButton } from "shared/ui/ThemeButton";
 import { LanguageSwitcher } from "shared/ui/LanguageSwitcher/LanguageSwitcher";
 import { Button, ThemeButtonChanger } from "shared/ui/Button/Button";
 import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import { useTranslation } from "react-i18next";
 import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 import AboutIcon from "shared/assets/icons/about-20-20.svg";
 import MainIcon from "shared/assets/icons/main-20-20.svg";
+import { useTranslation } from "react-i18next";
 
 interface SideBarProps {
   className?: string;
@@ -23,9 +23,10 @@ export const SideBar = ({ className }: SideBarProps) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const onToggle = () => {
-    setIsVisible((prev) => !prev);
+    setIsVisible((prev: any) => !prev);
   };
   return (
+    <>
     <div
       data-testid="sidebar"
       className={classNames(
@@ -69,5 +70,6 @@ export const SideBar = ({ className }: SideBarProps) => {
         <LanguageSwitcher short={isVisible} className={styles.lang} />
       </div>
     </div>
+    </>
   );
 };

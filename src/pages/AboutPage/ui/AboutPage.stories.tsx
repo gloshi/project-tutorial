@@ -1,22 +1,21 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
-import { NavBar } from './NavBar';
+import AboutPage  from './AboutPage';
 
 export default {
-    title: 'widget/NavBar',
-    component: NavBar,
+    title: 'shared/AboutPage',
+    component: AboutPage,
     argTypes: {
         backgroundColor: { control: 'color' },
     },
-} as ComponentMeta<typeof NavBar>;
+} as ComponentMeta<typeof AboutPage>;
 
-const Template: ComponentStory<typeof NavBar> = (args) => <NavBar {...args} />;
+const Template: ComponentStory<typeof AboutPage> = (args) => <AboutPage {...args} />;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const Normal = Template.bind({});
+Normal.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};

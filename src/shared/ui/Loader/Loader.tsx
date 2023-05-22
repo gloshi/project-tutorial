@@ -1,7 +1,10 @@
 import  "./Loader.scss";
 
+interface LoaderProps{
+  className?: string
+}
 
-const Loader = () => {
+const Loader = ({className}:LoaderProps) => {
   return (
     <div className="lds-spinner">
         <div></div>
