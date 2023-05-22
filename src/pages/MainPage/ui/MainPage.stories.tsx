@@ -5,7 +5,7 @@ import { Theme } from 'app/providers/ThemeProvider';
 import MainPage  from './MainPage';
 
 export default {
-    title: 'shared/MainPage',
+    title: 'pages/MainPage',
     component: MainPage,
     argTypes: {
         backgroundColor: { control: 'color' },
