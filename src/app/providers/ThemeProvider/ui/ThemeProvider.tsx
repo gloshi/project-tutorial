@@ -3,8 +3,13 @@ import { ThemeContext, Theme, LOCAL_STORAGE_THEME_KEY } from '../lib/ThemeContex
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.LIGHT
 
-const ThemeProvider: FC = ({ children }) => {
-  const [theme, setTreme] = useState<Theme>(defaultTheme)
+interface ThemeProviderProps {
+  initialTheme?: Theme
+}
+
+
+const ThemeProvider: FC<ThemeProviderProps> = ({ children,initialTheme }) => {
+  const [theme, setTreme] = useState<Theme>( initialTheme || defaultTheme)
 
     const toggleTheme = () => {
     setTreme(theme === Theme.DARK ? Theme.LIGHT : Theme.DARK)

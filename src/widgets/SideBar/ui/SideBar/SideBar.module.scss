@@ -5,6 +5,7 @@
     position: relative;
     transition: width 0.3s;
 }
+
 .switchers {
     position: absolute;
     bottom: 20px;
@@ -12,8 +13,6 @@
     justify-content: center;
     width: 100%;
 }
-
-
 
 .SideBarDark {
     height: calc(100vh - var(--navbar-height));
@@ -26,21 +25,25 @@
 .lang {
     margin-left: 20px;
 }
+
 .toggleBtn {
     position: absolute;
     right: -40px;
     bottom: 40px;
 }
+
 .backgroundInverted {
     background: var(--inverted-bg-color);
     color: var(--inverted-primary-color);
     border: none;
 }
+
 .background {
     background: var(--bg-color);
     color: var(--primary-color);
     border: none;
 }
+
 .items {
     margin-top: 22px;
     display: flex;
@@ -53,9 +56,11 @@
     display: flex;
     align-items: center;
 }
+
 .icon {
     fill: var(--inveted-primary-color);
 }
+
 .link {
     margin-top: 10px;
     opacity: 1;
@@ -63,14 +68,17 @@
 
 .isVisible {
     width: var(--sidebar-width-collapsed);
+
     .switchers {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
+
     .lang {
-        margin-left: 0px;
+        margin-left: 0;
     }
+
     .link {
         opacity: 0;
         transition: 0.2 opacity;
