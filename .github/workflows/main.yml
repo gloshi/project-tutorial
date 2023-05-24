@@ -21,7 +21,7 @@ jobs:
         run: npm install
       - name: unit testing
         if: always()
-        run: npm run test:unit
+        run: npm run unit
       - name: build storybook
         run: npm run storybook:build
         if: always()
