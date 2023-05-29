@@ -7,7 +7,7 @@
     z-index: -1;
     opacity: 0;
     pointer-events: none;
-    color: var(--primary-color);
+    color: var(--inverted-primary-color);
 }
 
 .overlay {
@@ -23,14 +23,13 @@
     padding: 25px;
     border-radius: 13px;
     background-color: var(--bg-color);
+    color: var(--secondary-color);
     transition: 0.3s transform;
     transform: scale(0.5);
     max-width: 60%;
 }
 
-.Modal.dark {
-    --bg-color: #090949;
-    --primary-color: #04ff04;
+.Modal.app_dark_theme {
 }
 
 .opened {

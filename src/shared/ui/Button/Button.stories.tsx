@@ -67,4 +67,12 @@ SizeL.args = {
     size: ButtonSize.L
 
 };
+export const disabledBtn = Template.bind({});
+disabledBtn.args = {
+    children: '>',
+    theme: ThemeButtonChanger.BACKGROUND,
+    square: true,
+    size: ButtonSize.L,
+    disabled: true
+};
 

@@ -10,27 +10,34 @@ interface ModalProps {
   children?: ReactNode
   isOpen? : boolean
   onClose?: () => void
+  lazy?: boolean
 }
 export const Modal = (props:ModalProps) => {
     const delay = 300
     const[isClosed, setIsClose] = useState<boolean>(false)
+    const [isInDom,setIsInDom] = useState(false)
     const timeRef = useRef<ReturnType<typeof setTimeout>>()
     const {theme} = useTheme()
-    console.log(theme)
+    
+ 
+
     const  {
         className,
         children,
         isOpen,
-        onClose
+        onClose,
+        lazy
     } = props
 
     const mods: Record<string, boolean> ={
         [styles.opened]: isOpen,
         [styles.isClosed]: isClosed,
-        [styles[theme]]: true
     }
-
-
+    useEffect(() => {
+        if(isOpen){
+            setIsInDom(true)
+        }
+    },[isOpen])
     const closeHandler = useCallback(() =>{
         if(onClose){
             setIsClose(true)
@@ -63,12 +70,16 @@ export const Modal = (props:ModalProps) => {
     },[isOpen])
 
   
+    if(lazy && !isInDom){
+        return null
+    }
+
   return (
     <Portal>
     <div className={classNames(styles.Modal, mods, [className])}>
         <div className={styles.overlay} onClick={closeHandler}>
-            <div className={classNames(styles.content, {[styles.contentOpen]: isOpen}, [className])} onClick={onContentClick}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque vero doloribus laboriosam cum magni inventore velit possimus ea impedit beatae! Minima deleniti rem accusantium ab autem qui cumque ipsa possimus? {children}
+            <div className={classNames(styles.content, {[styles.contentOpen]: isOpen}, [theme, 'app_modal'])} onClick={onContentClick}>
+                 {children}
             </div>
         </div>
     </div>

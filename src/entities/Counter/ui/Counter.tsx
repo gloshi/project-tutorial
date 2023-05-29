@@ -7,7 +7,6 @@ export const Counter = () => {
 
     const dispatch = useDispatch()
     const value = useSelector((state:CounterScheme) => state.counter.value   )
-    console.log(value)
     const inc = () => {
         dispatch(counterActions.increment())
     }

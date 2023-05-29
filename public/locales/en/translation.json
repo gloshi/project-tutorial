@@ -8,5 +8,9 @@
     "Произошла ошибка 500": "Something went wrong",
     "Обновить страницу": "Refresh this page",
     "Короткий язык": "EN",
-    "Войти": "Sign in"
+    "Войти": "Sign in",
+    "Введите пароль": "Enter your password",
+    "Введите имя": "Enter your name",
+    "Форма авторизации": "Authorization form",
+    "Выйти": "Sign out"
 }
