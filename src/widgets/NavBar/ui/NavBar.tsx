@@ -1,8 +1,7 @@
 import { classNames } from "shared/lib/classNames/classNames";
 
 import styles from "./NavBar.module.scss";
-import { Modal } from "shared/ui/Modal/Modal";
-import { useCallback, useState } from "react";
+import { memo, useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Button, ThemeButtonChanger } from "shared/ui/Button/Button";
 import { LoginModal } from "features/AuthByName";
@@ -13,7 +12,7 @@ interface NavBarProps {
   className?: string;
 }
 
-export const NavBar = ({ className }: NavBarProps) => {
+export const NavBar = memo(({ className }: NavBarProps) => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const authData = useSelector(getUserAuth);
@@ -56,4 +55,4 @@ export const NavBar = ({ className }: NavBarProps) => {
       {isOpen && <LoginModal isOpen={isOpen} onClose={onClose} />}
     </div>
   );
-};
+});

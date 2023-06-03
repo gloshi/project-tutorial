@@ -22,6 +22,7 @@ Primary.args = {};
 Primary.decorators = [
   StoreDecorator({
     loginForm: { username: "root", password: "123" },
+    
   }),
 ];
 

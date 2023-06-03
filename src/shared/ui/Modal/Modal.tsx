@@ -1,7 +1,7 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 
 import styles from './Modal.module.scss'
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import { Portal } from '../Portal/ui/Portal';
 import { useTheme } from 'app/providers/ThemeProvider';
 
@@ -16,10 +16,8 @@ export const Modal = (props:ModalProps) => {
     const delay = 300
     const[isClosed, setIsClose] = useState<boolean>(false)
     const [isInDom,setIsInDom] = useState(false)
-    const timeRef = useRef<ReturnType<typeof setTimeout>>()
+    const timeRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>
     const {theme} = useTheme()
-    
- 
 
     const  {
         className,
@@ -29,7 +27,7 @@ export const Modal = (props:ModalProps) => {
         lazy
     } = props
 
-    const mods: Record<string, boolean> ={
+    const mods: Mods ={
         [styles.opened]: isOpen,
         [styles.isClosed]: isClosed,
     }

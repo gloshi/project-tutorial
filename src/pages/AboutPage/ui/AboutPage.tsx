@@ -1,7 +1,7 @@
 import { BugBtn } from 'app/providers/ErrorProvider'
 import { useTranslation } from 'react-i18next'
 
-const About = ({}) => {
+const About = () => {
   const { t, i18n } = useTranslation('about')
     return (
       <>

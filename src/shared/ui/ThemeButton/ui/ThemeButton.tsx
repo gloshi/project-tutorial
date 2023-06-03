@@ -4,12 +4,13 @@ import styles from './ThemeButton.module.scss'
 import Light from 'shared/assets/icons/theme-light.svg'
 import Dark from 'shared/assets/icons/theme-dark.svg'
 import { Button, ThemeButtonChanger } from 'shared/ui/Button/Button'
+import { memo } from 'react'
 
 interface ThemeButtonProps {
   className?: string
 }
 
-export const ThemeButton = ({ className }: ThemeButtonProps) => {
+export const ThemeButton = memo(({ className }: ThemeButtonProps) => {
   console.log(className)
     const { theme, toggleTheme } = useTheme()
 
@@ -22,4 +23,4 @@ export const ThemeButton = ({ className }: ThemeButtonProps) => {
             {theme === Theme.DARK ? <Dark /> : <Light />}
         </Button>
   );
-}
+})

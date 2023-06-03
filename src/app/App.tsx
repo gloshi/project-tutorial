@@ -10,11 +10,13 @@ import { useTranslation } from 'react-i18next'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { useDispatch } from 'react-redux'
 import { userActions } from 'entities/User'
+import { useNavigate } from 'react-router-dom'
 
 const App = () => {
   const { theme } = useTheme()
   const dispatch = useDispatch()
-
+  const navigate = useNavigate()
+  
   useEffect(() => {
     dispatch(userActions.initAuthData())
   },[dispatch])
