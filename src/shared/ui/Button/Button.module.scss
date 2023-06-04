@@ -16,7 +16,11 @@
     color: var(--secondary-color);
     background: none;
 }
-
+.outline_red {
+    color: red;
+    border: 1px solid red;
+    background: none;
+}
 .background {
     background: var(--bg-color);
     color: var(--primary-color);

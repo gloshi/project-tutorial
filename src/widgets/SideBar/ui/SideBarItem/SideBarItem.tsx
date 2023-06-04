@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import { SidebarItemType } from "../model/Items";
 import { classNames } from "shared/lib/classNames/classNames";
 import { memo } from "react";
+import { useSelector } from "react-redux";
+import { getUserAuth } from "entities/User";
 
 interface SideBarItemsProps {
   item?: SidebarItemType;
@@ -14,6 +16,11 @@ interface SideBarItemsProps {
 // @ts-ignore какой-то баг с item
 export const SideBarItem = memo(({ item, isVisible }: SideBarItemsProps) => {
   const { t } = useTranslation();
+  const isAuth = useSelector(getUserAuth)
+
+if(item?.authOnly && !isAuth){
+  return null
+}
 
   if(!item){
     return

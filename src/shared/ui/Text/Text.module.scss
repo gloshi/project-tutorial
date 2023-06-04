@@ -7,7 +7,6 @@
     font: var(--font-m);
     color: var(--primary-color);
 }
-primary
 .error {
     .title {
         color: var(--red-light);
@@ -17,3 +16,15 @@ primary
         color: var(--red-dark);
     }
 }
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+

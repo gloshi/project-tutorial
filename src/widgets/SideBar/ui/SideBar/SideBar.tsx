@@ -17,9 +17,7 @@ interface SideBarProps {
 
 export const SideBar = memo(({ className }: SideBarProps) => {
  
-  
   const [isVisible, setIsVisible] = useState(false);
-
   const onToggle = () => {
     setIsVisible((prev: any) => !prev);
   };
@@ -44,7 +42,7 @@ export const SideBar = memo(({ className }: SideBarProps) => {
         </Button>
         <div className={styles.items}>
           {SidebarItemsList.map((item) => (
-            <SideBarItem item={item} isVisible={isVisible} key={item.path} />
+            <SideBarItem   item={item} isVisible={isVisible} key={item.path} />
           ))}
         </div>
         <div className={styles.switchers}>

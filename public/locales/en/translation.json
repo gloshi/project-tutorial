@@ -13,5 +13,7 @@
     "Введите имя": "Enter your name",
     "Форма авторизации": "Authorization form",
     "Выйти": "Sign out",
-    "Профиль": "Profile"
+    "Профиль": "Profile",
+    "Укажите валюту": "Specify the currency",
+    "Укажите страну": "Specify the country"
 }

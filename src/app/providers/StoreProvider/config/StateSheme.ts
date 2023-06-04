@@ -34,4 +34,5 @@ export interface ThunkExtraAtg {
 export interface ThunkConfig<T> {
     rejectValue: T
     extra: ThunkExtraAtg
+    state: StateSheme
 }
