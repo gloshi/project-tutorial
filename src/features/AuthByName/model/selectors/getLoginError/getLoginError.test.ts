@@ -13,6 +13,6 @@ describe('getLoginError test', () => {
     test('should work with empty state', () => {
         const state: DeepPartial<StateSheme> = {
         }
-        expect(getLoginError(state as StateSheme)).toEqual('error')
+        expect(getLoginError(state as StateSheme)).toEqual('')
     })
 })

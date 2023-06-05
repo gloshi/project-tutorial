@@ -3,5 +3,9 @@
     "Профиль": "Profile",
     "Редактировать": "Change",
     "Отменить": "Cancel",
-    "Сохранить": "Save"
+    "Сохранить": "Save",
+    "Поля имя и фамилия должны быть заполненны": "Name and surname fields must be filled",
+    "Заполните все поля": "Fill in all the fields",
+    "Некорректная страна": "The Wrong Country",
+    "Ошибка сервера": "Server error"
 }

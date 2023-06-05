@@ -5,7 +5,7 @@ import { memo } from 'react';
 
 export enum TextTheme {
 PRIMARY = 'primary',
-ERROR = '' 
+ERROR = 'error' 
 }
 
 export enum TextAlign {
@@ -27,8 +27,8 @@ export const Text = memo((props:TextProps) => {
     const {className,text,title,theme = TextTheme.PRIMARY,align = TextAlign.LEFT} = props 
 
     const mods: Mods = {
-      [styles.theme]: true,
-      [styles.align]: true
+      [styles[theme]]: true,
+      [styles[align]]: true
     }
 
   return (

@@ -1,3 +1,7 @@
+export { ValidateProfileErr } from './model/types/profile'
+
+export { getProfileValidateError } from './model/selectors/getProfileValidateError/getProfileValidateError'
+
 export { updateProfileData } from './model/services/updateProfileData/updateProfileData'
 
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm'
