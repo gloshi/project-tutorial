@@ -12,13 +12,10 @@ interface AvatarProps {
 
 export const Avatar = ({ className, src, size,alt }: AvatarProps) => {
   const mods: Mods = {};
-  const stylesObj = useMemo<CSSProperties>(
-    () => ({
-      width: size || 100,
-      heigth: size || 100,
-    }),
-    [size]
-  );
+  const stylesObj = useMemo<CSSProperties>(() => ({
+    width: size || 100,
+    height: size || 100,
+}), [size]);
   return (
     <img
       src={src}

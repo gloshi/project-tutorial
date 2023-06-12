@@ -2,6 +2,7 @@
 @import "variables/global";
 @import "themes/normal";
 @import "themes/dark";
+@import "themes/orange";
 
 body {
     
@@ -23,5 +24,8 @@ body {
 
 .page-wrapper {
     flex-grow: 1;
-    padding: 20px;
+    padding: 20px 20px 20px 45px;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    width: 100%;
 }

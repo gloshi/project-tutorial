@@ -1,5 +1,6 @@
 import { AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject } from "@reduxjs/toolkit"
 import { AxiosInstance } from "axios"
+import { ArticleDetailsSchema } from "entities/Article"
 import { CounterScheme } from "entities/Counter"
 import { ProfileSchema } from "entities/Profile"
 import { UserSchema } from "entities/User"
@@ -12,6 +13,7 @@ export interface StateSheme {
     //асинхронный редюсер, чтобы бандал был меньше
     loginForm?: LoginSchema
     profile: ProfileSchema
+    articleDetails?: ArticleDetailsSchema
 }
 export type StateShemeKey = keyof StateSheme
 
