@@ -16,6 +16,7 @@ import { Currency } from "shared/conts/Currency";
 import { CurrencySelect } from "entities/Currency/ui/CurrencySelect/CurrencySelect";
 import { Country } from "shared/conts/Country";
 import { CountrySelect } from "entities/Country";
+import { useParams } from "react-router-dom";
 
 interface ProfileCardProps {
   className?: string;
@@ -54,6 +55,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
     onChangeCurrency
   } = props;
   const { t } = useTranslation("profile");
+  const { id } = useParams<{ id: string }>();
 
   const dispatch = useAppDispatch();
   const onlyNumbers = (e: KeyboardEvent) => {
@@ -62,7 +64,10 @@ export const ProfileCard = (props: ProfileCardProps) => {
     }
   };
   useEffect(() => {
-    dispatch(fetchProfileData());
+    if(id){
+      dispatch(fetchProfileData(id));
+    }
+
   }, [dispatch]);
 
   const mods: Mods = {

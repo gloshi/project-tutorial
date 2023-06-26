@@ -6,6 +6,7 @@ import { updateProfileData } from './updateProfileData';
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsync/TestAsyncThunk';
 
 const data = {
+    id: '1',
     username: 'admin',
     age: 22,
     country: Country.Russia,
