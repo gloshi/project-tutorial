@@ -7,6 +7,7 @@ import { UserSchema } from "entities/User"
 import { AddCommentFormSchema } from "features/AddCommentForm"
 import { LoginSchema } from "features/AuthByName"
 import { ArticleDetailsCommentSchema } from "pages/ArticleDetailPage"
+import { articlePageSchema } from "pages/ArticlesPage"
 import { NavigateOptions, To } from "react-router-dom"
 
 export interface StateSheme {
@@ -18,6 +19,7 @@ export interface StateSheme {
     articleDetails?: ArticleDetailsSchema
     articleDetailsComments?: ArticleDetailsCommentSchema
     addCommentForm?: AddCommentFormSchema
+    articlesPage?: articlePageSchema
 }
 export type StateShemeKey = keyof StateSheme
 

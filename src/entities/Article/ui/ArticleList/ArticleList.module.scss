@@ -1,0 +1,21 @@
+.BIG {
+    .card {
+        margin-bottom: 30px;
+    }
+}
+
+.SMALL {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+}
+.ArticleList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color:  var(--primary--bg-color);
+}
